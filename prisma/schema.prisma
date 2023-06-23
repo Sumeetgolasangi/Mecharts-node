@@ -14,5 +14,5 @@ model Users {
   password     String?
   phonenumber  Float?
   passwordhint String?
-  username     String?
+  username     String @unique
 }
