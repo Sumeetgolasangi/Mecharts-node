@@ -1,7 +1,7 @@
 const prisma = require('../utils/prisma');
 
 const addUserDetails = async (req, res, next) => {
-	let email = 'sumeet.golasangi@tredence.com';
+	const email = req.query.email
 	const user = await prisma.user.findUnique({
 		where: {
 			email: email,
